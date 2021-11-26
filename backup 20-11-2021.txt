@@ -1,0 +1,100 @@
+const btnAdd = document.querySelector('#btnAdd');
+const mytext = document.querySelector('#myText');
+const new1 = document.querySelector('#new1');
+const btn = document.querySelector('.btn');
+const form1= document.querySelector('#form1');
+const resend = document.querySelector('#resend');
+const dropdown  = document.querySelector('.dropdown')
+// const myDropdown = document.querySelector('#myDropdown')
+
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+//   $('.btn').click(function() {
+//     var text = $('#input').val();
+//     $('#newDivs').append('<div>' + text + '</div>');
+//  });
+
+
+  btn.onclick = (e) =>{
+    e.preventDefault();
+      // ----Test check
+    // console.log('chcek click');
+
+    var datos = new FormData(form1);
+    // ----Test check 
+    //  console.log(datos);
+    //  console.log(datos.get('title'));
+    // console.log(datos.get('text1'));
+     
+    fetch('post.php',{
+      method: 'POST',
+      body: datos
+
+    })
+
+    .then( Response => {
+      console.log(Response);
+    }
+      )
+   
+    .then( data => {
+        console.log(data);
+ 
+    })
+   
+    const row = document.createElement('div');
+    row.innerHTML= `
+
+    <button id="new2" class="dropbtn">${datos.get(`title`)} <i class="arrow down"></i> </button>
+
+    <div id="myDropdown" class="dropdown-content" > 
+
+    <p id="new3">${datos.get(`text1`)} </p>
+
+    </div>
+
+    <br>
+    <br>
+
+    `
+
+    dropdown.appendChild(row);
+    
+
+    // var y = document.getElementById("title1").value;
+    // document.getElementById("new2").innerHTML = y ;
+    
+
+    new2.onclick = (s) =>{
+        // s.preventDefault();
+        // var z = document.getElementById("textarea1").value;
+        // document.getElementById("new3").innerHTML = z;
+
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    const targetDiv =  document.getElementById("myDropdown");
+    if (targetDiv.style.display === "none") {
+        targetDiv.style.display = "block";
+      } else {
+        targetDiv.style.display = "none";
+      }
+  
+      
+
+
+ } 
+
+
+
+
+  
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    
+    <title>Document TEST</title>
+</head>
+<body>
+
+<br>
+
+    <div class="dropdown"> 
+
+
+    </div>
+
+
+    <div> 
+
+    <button class="open-button" onclick="openForm()">Add a Title and text</button>
+  </div>
+
+
+    <div class="form-popup" id="myForm" >
+
+      <form  class="form-container" id='form1' >
+        
+        <label for="title"><b>Ttitle</b></label>
+        <input id="title1" type="text" placeholder="Enter a title" name="title" required>
+    
+        <label for="text1"><b>Text</b></label>
+        <br>
+        <br>
+        <textarea id="textarea1" type="textarea" placeholder="Enter a text" name="text1" required> </textarea>
+         <br>
+         <br>
+        <button type="submit" class="btn">sumbit</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+
+    </div>
+ 
+
+
+   
+   
+<script src="them.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"> </script>
+</body>
+</html>

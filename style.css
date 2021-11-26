@@ -1,0 +1,130 @@
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  /* position: fixed; */
+  bottom: 23px;
+  right: 28px;
+  /* width: 280px; */
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  left: 400px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  
+ 
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: 1px black;
+  background: #ffffff;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #028a58;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(255, 0, 0);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+.new2{
+    border: 1px black ;
+    width: auto;
+    background-color: white;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+
+
+
+.new3 {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #958f8f;
+    background-color: #dbdbdb3d;
+    width: fit-content;
+  }
+
+  #textarea1{
+    margin-top: -11px;
+  }
+
+/* ----------------------- */
+.myDropdown {
+  display: none;
+}
+
+
+/* ----------------------- */
+
+
+.editwidth{
+  width: 45%;
+  background-color:	#f8f8f8bf;
+}
+
+/*............... position-detail-marker-.START. */
+
+
+details>summary {
+  
+  list-style: none;
+  background: white;
+  font-weight: bold;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  content: ' ►';
+}
+details[open] summary:after {
+  content: " ▼";
+}
+/*............... position-detail-marker- END.. */
