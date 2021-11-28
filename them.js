@@ -1,5 +1,5 @@
 const btn = document.querySelector('.btn');
-const form1= document.querySelector('#form1');
+const form1= document.getElementById('form1');
 const dropdown  = document.querySelector('.dropdown');
 // const new2 = document.getElementsByClassName('.new2');
 
@@ -23,23 +23,24 @@ function openForm() {
     //  console.log(datos.get('title'));
     // console.log(datos.get('text1'));
      
-    fetch('post.php',{
-      method: 'POST',
+    fetch("post.php", {
+      method:"POST",
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+     },
       body: datos
 
+    }).then(function (response) {
+         return response.data();
+    
+    }).then(function(data){
+      console.log(data);
     })
-
-    .then( Response => {
-      console.log(Response);
-    }
-      )
+    
    
-    .then( data => {
-        console.log(data);
- 
-    })
+  
    
-    const row = document.createElement('div');
+   const row = document.createElement('div');
     row.innerHTML= `
 
     
